@@ -1,0 +1,31 @@
+name: Rilis Manual
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'versi rilis, contoh v1.0.0'
+        required: true
+        default: 'v1.0.0'
+
+jobs:
+  rilis:
+    runs-on: ubuntu-latesh
+    permissions:
+      contents: write
+    steps:
+      - name: Donwload code
+        uses: actions/checkout@v4
+
+      - name: Bikin file zip
+        run: |
+          chmod +x bersihin.sh cek-user.sh panel.sh
+          zip -r sysadmin-toolkit-${{ inputs.version }}.zip bersihin.sh cek-user.sh panel.sh
+          ls -lh *.zip
+
+      - name: bikin release di github
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ inputs.version }}
+          name: rilis ${{ inputs.version }}
+          files: '*.zip'
