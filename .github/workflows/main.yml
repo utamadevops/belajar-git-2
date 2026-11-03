@@ -1,0 +1,26 @@
+name: Cek Script Bash
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-bash:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download code
+        uses: actions/checkout@v4
+
+      - name: Cek syntax semua script
+        run: |
+          bash -n bersihin.sh
+          bash -n cek-user.sh
+          bash -n panel.sh
+          echo "Semua script aman!"
+
+      - name: Kasih izin dan coba jalanin
+        run: |
+          chmod +x bersihin.sh cek-user.sh panel.sh
+          ls -l *.sh
