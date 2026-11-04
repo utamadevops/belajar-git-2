@@ -11,7 +11,7 @@ jobs:
       - name: ambil kode repo
         uses: actions/checkout@v4
       - name: upload hasil zip ke artifacts
-        uses: actions/upload-artifacts@v4
+        uses: actions/upload-artifact@v4
         with:
           name: arsip-zip-projek
           path: projek-saya.zip
