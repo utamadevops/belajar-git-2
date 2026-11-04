@@ -10,6 +10,8 @@ jobs:
     steps:
       - name: ambil kode repo
         uses: actions/checkout@v4
+      - name: bungkus file jadi zip
+        run: zip -r projek-saya.zip. -x ".git/*" ".github/"
       - name: upload hasil zip ke artifacts
         uses: actions/upload-artifact@v4
         with:
