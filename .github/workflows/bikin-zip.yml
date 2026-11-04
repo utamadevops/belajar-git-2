@@ -1,0 +1,17 @@
+name: robot pembuat zip otomatis
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  proses-zip:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ambil kode repo
+        uses: actions/checkout@v4
+      - name: upload hasil zip ke artifacts
+        uses: actions/upload-artifacts@v4
+        with:
+          name: arsip-zip-projek
+          path: projek-saya.zip
