@@ -8,8 +8,8 @@ jobs:
   cek-sistem:
    runs-on: ubuntu-latesh
    steps:
-    - name: sapa pengguna
-     run: echo "halo utamadevops"
+     - name: sapa pengguna
+       run: echo "halo utamadevops"
 
-    - name: cek versi ubuntu mesin github
-     run: lsb_release -a
+     - name: cek versi ubuntu mesin github
+       run: lsb_release -a
