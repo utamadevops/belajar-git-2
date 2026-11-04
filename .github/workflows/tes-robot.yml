@@ -6,7 +6,7 @@ on:
 
 jobs:
   cek-sistem:
-   runs-on: ubuntu-latesh
+   runs-on: ubuntu-latest
    steps:
      - name: sapa pengguna
        run: echo "halo utamadevops"
