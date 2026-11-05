@@ -9,5 +9,5 @@ jobs:
   belajar:
     runs-on: ubuntu-latest
     steps:
-      - nama: halo
+      - name: halo
         run: echo "halo dunia gw richval"
