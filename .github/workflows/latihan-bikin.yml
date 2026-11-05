@@ -3,7 +3,7 @@ name: latihan bikin sendiri
 on:
   push:
     branches: ["main"]
-  workflows_dispatch:
+  workflow_dispatch:
 
 jobs:
   belajar:
