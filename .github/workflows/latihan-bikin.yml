@@ -1,0 +1,13 @@
+name: latihan bikin sendiri
+
+on:
+  push:
+    branches: ["main"]
+  workflows_dispatch:
+
+jobs:
+  belajar:
+    runs-on: ubuntu-latest
+    steps:
+      - nama: halo
+        run: echo "halo dunia gw richval"
